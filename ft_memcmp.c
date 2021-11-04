@@ -21,7 +21,15 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	i = 0;
 	t_str1 = (unsigned char const *)str1;
 	t_str2 = (unsigned char const *)str2;
-	while (t_str1[i] == t_str2[i] && i < n)
+	while (t_str1[i] == t_str2[i] && i < n - 1)
 		i++;
 	return (t_str1[i] - t_str2[i]);
 }
+
+// int main()
+// {
+// 	char s1[] = "ahamma";
+// 	char s2[] = "ahammb";
+
+// 	printf("-->%d", ft_memcmp(s1,s2,5));
+// }

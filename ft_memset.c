@@ -26,3 +26,9 @@ void	*ft_memset(void *ptr, int x, size_t n)
 	}
 	return (ptr);
 }
+
+// int main()
+// {
+// 	char str[] = "ahammam";
+// 	printf("%s",(char *)ft_memset(str,'c',6));
+// }

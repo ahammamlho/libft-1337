@@ -28,6 +28,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		result[i] = t_s[i + start];
 		i++;
 	}
-	result[i] = '\0'
+	result[i] = '\0';
 	return (result);
 }
+
+// int main()
+// {
+// 	printf("%s",ft_substr("ahammam", 2, 4));
+// }

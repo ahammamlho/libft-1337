@@ -76,8 +76,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result[i] = '\0';
 	return (result);
 }
-/*
-int main()
-{
-	printf("%s\n", ft_strtrim("ahama7ma", "547a"));
-}*/
+
+// int main()
+// {
+// 	printf("%s\n", ft_strtrim("ahama7ma", "547a"));
+// }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memove.c                                        :+:      :+:    :+:   */
+/*   ft_memcopy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 12:10:30 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 12:10:30 by lahammam         ###   ########.fr       */
+/*   Created: 2021/11/03 12:10:15 by lahammam          #+#    #+#             */
+/*   Updated: 2021/11/03 19:34:58 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-// test
+
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 	char			*t_dest;
@@ -26,5 +26,13 @@ void	*ft_memmove(void *dest, const void *src, unsigned int n)
 		t_dest[i] = t_src[i];
 		i++;
 	}
-	return ((void *)dest);
+	return (dest);
 }
+
+// int main()
+// {
+// 	char s1[] = "ahamma";
+// 	char s2[] = "uiuiuuigjgj";
+
+// 	printf("-->%s", (char *)ft_memcpy(s1,s2,5));
+// }

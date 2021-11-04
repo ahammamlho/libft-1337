@@ -31,3 +31,8 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (result);
 }
+
+// int main()
+// {
+// 	printf("%s",ft_strrchr("ahammamt",'m'));
+// }

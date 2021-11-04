@@ -24,5 +24,12 @@ unsigned int	ft_strlcpy(char *dest, char *src, size_t size)
 	}
 	if (size != 0)
 		dest[i] = '\0';
-	return (ft_strlen(src));
+	return ((unsigned int)ft_strlen(src));
 }
+
+// int main()
+// {
+// 	char *s1 = "ahammam";
+// 	char s2[13];
+// 	printf("%d",(int)ft_strlcpy(s2,s1,13));
+// }

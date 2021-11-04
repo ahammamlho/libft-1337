@@ -18,7 +18,7 @@ unsigned int	ft_strlcat(char *dest, char *src, size_t size)
 	unsigned int	len_dest;
 
 	i = 0;
-	len_dest = ft_strlen(dest);
+	len_dest = (unsigned int)ft_strlen(dest);
 	if (len_dest >= size)
 		return (ft_strlen(src) + size);
 	while (src[i] != '\0' && (len_dest + i < size - 1))
@@ -27,5 +27,12 @@ unsigned int	ft_strlcat(char *dest, char *src, size_t size)
 		i++;
 	}
 	dest[len_dest + i] = '\0';
-	return (ft_strlen(src) + len_dest);
+	return ((unsigned int)ft_strlen(src) + len_dest);
 }
+
+// int main()
+// {
+// 	char *s1 = "ahammam";
+// 	char s2[13];
+// 	printf("%d",(int)ft_strlcat(s2,s1,13));
+// }

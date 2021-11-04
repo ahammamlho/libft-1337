@@ -23,17 +23,16 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*
-void f(unsigned int index, char *c)
-{
-	index++;
-	*c += 1;
-}
 
-#include <stdio.h>
-int main()
-{
-	char s[] = "test";
-	ft_striteri(s, f);
-	printf("%s\n", s);
-}*/
+// void f(unsigned int index, char *c)
+// {
+// 	index++;
+// 	*c += 1;
+// }
+// #include <stdio.h>
+// int main()
+// {
+// 	char s[] = "test";
+// 	ft_striteri(s, f);
+// 	printf("%s\n", s);
+// }

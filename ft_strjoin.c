@@ -34,3 +34,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		result[j++] = t_s2[i++];
 	return (result);
 }
+
+// int main()
+// {
+// 	printf("%s",ft_strjoin("ahamma","lhou"));
+// }

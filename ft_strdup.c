@@ -15,14 +15,14 @@
 char	*ft_strdup(const char *src)
 {
 	int		i;
-	int		len_src;
 	char	*result;
 	char	*t_src;
 
 	i = 0;
 	t_src = (char *)src;
-	len_src = ft_strlen((char *)src);
-	result = (char *) malloc(len_src + 1);
+	result = (char *) malloc(ft_strlen(src) + 1);
+	if (!result)
+		return (0);
 	while (t_src[i])
 	{
 		result[i] = t_src[i];
@@ -31,3 +31,8 @@ char	*ft_strdup(const char *src)
 	result[i] = '\0';
 	return (result);
 }
+
+// int main()
+// {
+// 	printf("%s",ft_strdup("ahammam"));
+// }

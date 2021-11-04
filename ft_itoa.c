@@ -75,9 +75,3 @@ char	*ft_itoa(int n)
 		result = ft_add_char(result, '-');
 	return (ft_reverse(result));
 }
-/*
-int main()
-{
-	//char src[] = "1ab3";
-	printf("->|%s|",ft_itoa(-2147483647));
-}*/

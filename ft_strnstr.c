@@ -36,3 +36,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+// int main()
+// {
+// 	printf("%s",ft_strnstr("ahammam","am",7));
+// }
