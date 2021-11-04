@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_add_char(const char *src, char c)
+static char	*ft_add_char(const char *src, char c)
 {
 	char	*result;
 	int		i;
@@ -29,7 +29,7 @@ char	*ft_add_char(const char *src, char c)
 	return (result);
 }
 
-char	*ft_reverse(char *src)
+static char	*ft_reverse(char *src)
 {
 	char	temp;
 	int		len;

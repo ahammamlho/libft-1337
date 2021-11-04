@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_m_alloc(const char *str, char c)
+static int	ft_m_alloc(const char *str, char c)
 {
 	int	i;
 	int	len;
@@ -33,7 +33,7 @@ int	ft_m_alloc(const char *str, char c)
 	return (len + 1);
 }
 
-char	*ft_add_mot(const char *str, int i, int j)
+static char	*ft_add_mot(const char *str, int i, int j)
 {
 	int		len_mot;
 	int		k;
