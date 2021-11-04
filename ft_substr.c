@@ -17,22 +17,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char				*result;
 	char				*t_s;
 	unsigned int		i;
-	unsigned int		j;
 
-	result = (char *)ft_calloc(len, sizeof(char));
-	if (!result)
-		return (result);
 	i = 0;
-	j = 0;
 	t_s = (char *)s;
-	while (t_s && t_s[i] != '\0')
+	result = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!result)
+		return (0);
+	while (t_s && t_s[i] != '\0' && i < len)
 	{
-		if (start <= i && j < len)
-		{
-			result[j] = t_s[i];
-			j++;
-		}
+		result[i] = t_s[i + start];
 		i++;
 	}
+	result[i] = '\0'
 	return (result);
 }

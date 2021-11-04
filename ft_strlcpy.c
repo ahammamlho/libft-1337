@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	unsigned int	i;
 
@@ -22,6 +22,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	if (size != 0)
+		dest[i] = '\0';
 	return (ft_strlen(src));
 }

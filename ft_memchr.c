@@ -10,19 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// test
 #include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	char		*temp;
-	size_t		i;
+	unsigned char		*temp;
+	size_t				i;
 
 	i = 0;
-	temp = (char *)str;
-	while (temp && temp[i] != '\0' && i < n)
+	temp = (unsigned char *)str;
+	while (temp && i < n)
 	{
-		if (temp[i] == (char )c)
-			return ((char *)&temp[i]);
+		if (temp[i] == (unsigned char )c)
+			return ((void *)&temp[i]);
 		i++;
 	}
 	return (0);

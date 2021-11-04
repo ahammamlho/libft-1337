@@ -12,18 +12,6 @@
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
-{
-	int		i;
-	char	*t_str;
-
-	i = 0;
-	t_str = (char *)str;
-	while (t_str && t_str[i] != '\0')
-		i++;
-	return (i);
-}
-
 int	ft_isexist(char *src, char c)
 {
 	int	i;
