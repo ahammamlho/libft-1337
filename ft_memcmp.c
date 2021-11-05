@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:09:54 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 12:09:54 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/04 17:39:41 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t		i;
+	size_t					i;
 	unsigned char const		*t_str1;
 	unsigned char const		*t_str2;
 

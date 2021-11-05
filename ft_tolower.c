@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:13:42 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 12:13:42 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/04 17:40:51 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	unsigned char ch;
+	unsigned char	ch;
 
 	ch = (unsigned char)c;
 	if (ch <= 'Z' && ch >= 'A')

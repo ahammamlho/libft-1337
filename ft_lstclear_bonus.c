@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 12:06:04 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 11:22:54 by lahammam         ###   ########.fr       */
+/*   Created: 2021/11/05 11:24:37 by lahammam          #+#    #+#             */
+/*   Updated: 2021/11/05 11:52:49 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *ptr, size_t n)
+void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	unsigned int i;
-	unsigned char *temp;
+    del(lst->content);
+    free(lst);
+}
 
-	i = 0;
-	temp = (unsigned char *)ptr;
-	while (i < n)
-	{
-		*(temp + i) = 0;
-		i++;
-	}
+void ft_lstclear(t_list **lst, void (*del)(void *))
+{
+    while (lst)
+    {
+        ft_lstdelone(*lst, del);
+        lst = lst->next;
+    }
+}
+
+int main()
+{
+    
 }

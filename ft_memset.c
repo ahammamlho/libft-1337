@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:10:53 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 12:10:53 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/05 10:41:27 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	*ft_memset(void *ptr, int x, size_t n)
 // int main()
 // {
 // 	char str[] = "ahammam";
-// 	printf("%s",(char *)ft_memset(str,'c',6));
+// 	printf("%s",(char *)ft_memset(str, 65,6));
 // }

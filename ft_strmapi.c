@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 19:21:38 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 19:31:25 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/05 09:36:16 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
+// char f(unsigned int i,char c)
+// {
+// 	char ch;
+// 	i++;
+// 	ch = c + 1;
+// 	return ch;
+// }
+
 // int main()
 // {
-
+// 	printf("%s",ft_strmapi("ahammam", f));
 // }

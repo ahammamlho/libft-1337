@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 12:06:04 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 11:22:54 by lahammam         ###   ########.fr       */
+/*   Created: 2021/11/05 09:27:11 by lahammam          #+#    #+#             */
+/*   Updated: 2021/11/05 10:29:27 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *ptr, size_t n)
+t_list *ft_lstnew(void *content)
 {
-	unsigned int i;
-	unsigned char *temp;
+    t_list	*result;
+	result = (t_list *)malloc(sizeof(t_list));
+	result->content = content;
+	result->next = 0;
+	return(result);
+}
 
-	i = 0;
-	temp = (unsigned char *)ptr;
-	while (i < n)
-	{
-		*(temp + i) = 0;
-		i++;
-	}
+int main()
+{
+	 t_list	*result;
+	 char *a = "ahammam";
+	 result = ft_lstnew(a);
+	 printf("%s", result->content);
 }
