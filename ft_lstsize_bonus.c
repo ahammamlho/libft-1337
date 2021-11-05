@@ -17,7 +17,7 @@ int ft_lstsize(t_list *lst)
     int len;
 
     len = 0;
-    while(lst)
+    while (lst)
     {
         len++;
         lst = lst->next;
@@ -25,32 +25,31 @@ int ft_lstsize(t_list *lst)
     return (len);
 }
 
-void show_list(t_list *head)
-{
-    while (head)
-    {
-     printf("%s - %p \n",head->content,head);
-     head = head->next;
-    }
-}
+// void show_list(t_list *head)
+// {
+//     while (head)
+//     {
+//      printf("%s - %p \n",head->content,head);
+//      head = head->next;
+//     }
+// }
 
-int main()
-{
-	t_list	n1, n2, n3;
+// int main()
+// {
+// 	t_list	n1, n2, n3;
 
-    t_list *head;
+//     t_list *head;
 
-    n1.content = "a1";
-    n2.content = "a2";
-    n3.content = "a3";
-     
+//     n1.content = "a1";
+//     n2.content = "a2";
+//     n3.content = "a3";
 
-    head = &n1;
-    n1.next = &n2;
-    n2.next = &n3;
-    n3.next = 0;
-    show_list(head);
-    printf("%d\n",ft_lstsize(head));
-    show_list(head);
- 
-}
+//     head = &n1;
+//     n1.next = &n2;
+//     n2.next = &n3;
+//     n3.next = 0;
+//     show_list(head);
+//     printf("%d\n",ft_lstsize(head));
+//     show_list(head);
+
+// }

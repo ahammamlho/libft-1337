@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+int ft_tolower(int c)
 {
-	unsigned char	ch;
+	unsigned char ch;
 
 	ch = (unsigned char)c;
 	if (ch <= 'Z' && ch >= 'A')

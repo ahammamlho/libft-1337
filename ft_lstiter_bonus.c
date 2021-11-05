@@ -14,32 +14,32 @@
 
 void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    while(lst)
+    while (lst)
     {
         f(lst->content);
         lst = lst->next;
     }
 }
 
-t_list *ft_lstnew(void *content)
-{
-    t_list	*result;
-	result = (t_list *)malloc(sizeof(t_list));
-	result->content = content;
-	result->next = 0;
-	return(result);
-}
+// t_list *ft_lstnew(void *content)
+// {
+//     t_list	*result;
+// 	result = (t_list *)malloc(sizeof(t_list));
+// 	result->content = content;
+// 	result->next = 0;
+// 	return(result);
+// }
 
-void f(void *s)
-{
-    s++;
-}
+// void f(void *s)
+// {
+//     s++;
+// }
 
-int main()
-{
-    t_list *n1;
-    n1 = ft_lstnew("12345689");
-    printf("%s \n", n1->content);
-    ft_lstiter(n1, f);
-    printf("%s \n", n1->content);
-}
+// int main()
+// {
+//     t_list *n1;
+//     n1 = ft_lstnew("12345689");
+//     printf("%s \n", n1->content);
+//     ft_lstiter(n1, f);
+//     printf("%s \n", n1->content);
+// }

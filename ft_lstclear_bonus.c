@@ -18,16 +18,16 @@ void ft_lstdelone(t_list *lst, void (*del)(void *))
     free(lst);
 }
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
-{
-    while (*lst)
-    {
-        ft_lstdelone(*lst, del);
-        lst = lst->next;
-    }
-}
+// void ft_lstclear(t_list **lst, void (*del)(void *))
+// {
+//     while (*lst)
+//     {
+//         ft_lstdelone(*lst, del);
+//         lst = lst->next;
+//     }
+// }
 
-int main()
-{
-    
-}
+// int main()
+// {
+
+// }
