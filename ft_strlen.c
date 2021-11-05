@@ -6,15 +6,15 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:12:04 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 16:56:41 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/05 14:49:37 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	int		i;
+	size_t	i;
 	char	*t_str;
 
 	i = 0;

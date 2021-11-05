@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 09:56:29 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 11:07:28 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/05 16:08:49 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,28 @@ void show_list(t_list *head)
      head = head->next;
     }
 }
+
+t_list *ft_lstnew(void *content)
+{
+    t_list	*result;
+	result = (t_list *)malloc(sizeof(t_list));
+	result->content = content;
+	result->next = 0;
+	return(result);
+}
+
 int main()
 {
-	t_list	n1, n2, n3, n4;
+	t_list	*n1;
+    t_list	*n2;
+    t_list	*n3;
 
-    t_list *head;
+    n1 = ft_lstnew("a1");
+    n2 = ft_lstnew("a2");
+    n3 = ft_lstnew("a3");
+    ft_lstadd_front( &n3, n2);
+    ft_lstadd_front( &n2, n1);
 
-    n1.content = "a1";
-    n2.content = "a2";
-    n3.content = "a3";
-    n4.content = "a4";
-
-    head = &n1;
-    n1.next = &n2;
-    n2.next = &n3;
-    n3.next = 0;
-
-    ft_lstadd_front( &head, &n4);
-
-    show_list(&n4);
+    show_list(n1);
  
 }

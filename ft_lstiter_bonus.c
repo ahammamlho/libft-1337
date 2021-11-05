@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 09:27:11 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 16:07:12 by lahammam         ###   ########.fr       */
+/*   Created: 2021/11/05 16:37:03 by lahammam          #+#    #+#             */
+/*   Updated: 2021/11/05 16:49:09 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void ft_lstiter(t_list *lst, void (*f)(void *))
+{
+    while(lst)
+    {
+        f(lst->content);
+        lst = lst->next;
+    }
+}
 
 t_list *ft_lstnew(void *content)
 {
@@ -21,10 +30,16 @@ t_list *ft_lstnew(void *content)
 	return(result);
 }
 
-// int main()
-// {
-// 	 t_list	*result;
-// 	 int a = 1;
-// 	 result = ft_lstnew(&a);
-// 	// printf("%d", result->content);
-// }
+void f(void *s)
+{
+    s++;
+}
+
+int main()
+{
+    t_list *n1;
+    n1 = ft_lstnew("12345689");
+    printf("%s \n", n1->content);
+    ft_lstiter(n1, f);
+    printf("%s \n", n1->content);
+}

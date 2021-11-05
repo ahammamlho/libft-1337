@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:51:37 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 11:09:54 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/05 15:59:21 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void show_list(t_list *head)
      head = head->next;
     }
 }
+
 int main()
 {
 	t_list	n1, n2, n3, n4;

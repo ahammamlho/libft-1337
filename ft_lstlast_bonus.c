@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:45:12 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 10:52:01 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/05 15:35:34 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ t_list *ft_lstlast(t_list *lst)
 {
     while (lst->next != 0)
     {
-    // printf("%s - %p \n",lst->content,lst);
-     lst = lst->next;
+        lst = lst->next;
     }
     return (lst);
 }
@@ -32,17 +31,19 @@ void show_list(t_list *head)
 
 int main()
 {
-	t_list	n1, n2, n3;
+	t_list	n1, n2, n3, n4;
     t_list *head;
 
     n1.content = "a1";
     n2.content = "a2";
     n3.content = "a3";
+    n4.content = "a4";
      
     head = &n1;
     n1.next = &n2;
     n2.next = &n3;
-    n3.next = 0;
+    n3.next = &n4;
+    n4.next = 0;
     
     t_list *last;
     last = ft_lstlast(head);
