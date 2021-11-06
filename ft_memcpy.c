@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcopy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:10:15 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 19:34:58 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 11:35:10 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
-	char			*t_dest;
-	char			*t_src;
+	unsigned int			i;
+	unsigned char			*t_dest;
+	unsigned char			*t_src;
 
 	i = 0;
-	t_dest = (char *)dest;
-	t_src = (char *)src;
+	t_dest = (unsigned char *)dest;
+	t_src = (unsigned char *)src;
 	while (i < n)
 	{
 		t_dest[i] = t_src[i];

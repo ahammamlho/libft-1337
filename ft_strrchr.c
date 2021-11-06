@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:13:26 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 12:13:26 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 13:53:53 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ char	*ft_strrchr(const char *str, int c)
 
 // int main()
 // {
-// 	printf("%s",ft_strrchr("ahammamt",'m'));
+// 	printf("%s",ft_strrchr("ahammamt",'\0'));
 // }

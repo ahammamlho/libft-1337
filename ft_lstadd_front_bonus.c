@@ -6,15 +6,15 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 09:56:29 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 16:08:49 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 10:15:08 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    new->next = *lst;
+	new->next = *lst;
 }
 
 // void show_list(t_list *head)

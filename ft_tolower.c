@@ -6,18 +6,15 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:13:42 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/04 17:40:51 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 10:20:12 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	unsigned char ch;
-
-	ch = (unsigned char)c;
-	if (ch <= 'Z' && ch >= 'A')
-		ch = ch + 32;
-	return (ch);
+	if (c <= 'Z' && c >= 'A')
+		c = c + 32;
+	return (c);
 }

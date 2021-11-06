@@ -6,13 +6,13 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:56:45 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 17:31:00 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 16:00:43 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isexist(char *src, char c)
+static int	ft_isexist(char *src, char c)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	ft_isexist(char *src, char c)
 	return (0);
 }
 
-int	ft_first(char *src, char *set)
+static int	ft_first(char *src, char *set)
 {
 	int	i;
 
@@ -40,7 +40,7 @@ int	ft_first(char *src, char *set)
 	return (-1);
 }
 
-int	ft_end(char *src, char *set)
+static int	ft_end(char *src, char *set)
 {
 	int	len;
 

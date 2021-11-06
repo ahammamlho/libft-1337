@@ -6,16 +6,16 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 11:10:33 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 16:54:35 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 10:15:22 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    del(lst->content);
-    free(lst);
+	del(lst->content);
+	free(lst);
 }
 
 // void show_list(t_list *head)

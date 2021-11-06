@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:54:03 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 18:49:26 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 16:25:23 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,17 @@ static char	*ft_reverse(char *src)
 	return (src);
 }
 
+static char	*zero(int z)
+{
+	char	*result;
+
+	result = (char *)malloc(2);
+	z++;
+	result[0] = '0';
+	result[1] = '\0';
+	return (result);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*result;
@@ -57,7 +68,7 @@ char	*ft_itoa(int n)
 	nbr = n;
 	mod = 0;
 	if (n == 0)
-		return ("0");
+		return (zero(0));
 	if (n == -2147483648)
 	{
 		result = ft_add_char(result, '8');
@@ -75,3 +86,8 @@ char	*ft_itoa(int n)
 		result = ft_add_char(result, '-');
 	return (ft_reverse(result));
 }
+
+// int main()
+// {
+// 	printf("%s\n" , ft_itoa(0));
+// }

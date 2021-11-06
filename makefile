@@ -2,16 +2,14 @@ SRCS = ${wildcard *.c}
 OBJES = ${SRCS:.c=.o}
 NAME = libft.a
 GCC = gcc
-AR = ar rc
+AR = ar rcs
 CFLAGS = -Wall -Wextra -Werror 
-RM = rm -f
+RM = rm -rf
 
 %.o : %.c
 	   ${GCC} ${CFLAGS} -c $< -o $@
 ${NAME} : ${OBJES}
 		${AR} $@ ${OBJES} 
-		${RM} ${OBJES}
-
 all: ${NAME}
 
 clean:

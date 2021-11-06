@@ -6,17 +6,17 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:51:37 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 15:59:21 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 10:15:00 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    while (lst->next != 0)
-        lst = lst->next;
-    return (lst);
+	while (lst->next != 0)
+		lst = lst->next;
+	return (lst);
 }
 
 // void ft_lstadd_back(t_list **lst, t_list *new)
