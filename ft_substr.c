@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:24:12 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 16:10:54 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:13:50 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main()
 // {
-// 	printf("%s",ft_substr("ahammam", 10, 2));
+// 	printf ("%s",ft_substr("ahammam", 10, 2));
 // }

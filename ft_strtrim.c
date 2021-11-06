@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:56:45 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 16:00:43 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:19:34 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	ft_first(char *src, char *set)
 			return (i);
 		i++;
 	}
-	return (-1);
+	return (0);
 }
 
 static int	ft_end(char *src, char *set)
@@ -48,36 +48,23 @@ static int	ft_end(char *src, char *set)
 	while (len > 0)
 	{
 		if (!ft_isexist(set, src[len - 1]))
-			return (len - 1);
+			return (len);
 		len--;
 	}
-	return (-1);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;
 	int		end;
-	char	*result;
-	int		i;
 
-	i = 0;
 	start = ft_first((char *)s1, (char *)set);
 	end = ft_end((char *)s1, (char *)set);
-	if (start == -1)
-		start = 0;
-	if (end == -1)
-		end = ft_strlen(s1);
-	result = (char *)malloc(end - start);
-	if (!result)
-		return (result);
-	while (start < end + 1)
-		result[i++] = s1[start++];
-	result[i] = '\0';
-	return (result);
+	return (ft_substr(s1, start, end - start));
 }
 
 // int main()
 // {
-// 	printf("%s\n", ft_strtrim("ahama7ma", "547a"));
+// 	printf("%s\n", ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " "));
 // }
