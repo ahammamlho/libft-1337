@@ -6,11 +6,11 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 11:10:33 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 10:15:22 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 11:56:06 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
@@ -27,11 +27,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 //     }
 // }
 
-// void ft_lstadd_front(t_list **lst, t_list *new)
-// {
-//     new->next = *lst;
-// }
-
 // t_list *ft_lstnew(void *content)
 // {
 //     t_list	*result;
@@ -43,20 +38,20 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 
 // int main()
 // {
-// 	t_list	*n1, *n2, *n3;
+// 	t_list	*n1, *n2, *n3, *n4;
 
-//     t_list *head;
 
 //     n1 = ft_lstnew("n1");
 //     n2 = ft_lstnew("n2");
 //     n3 = ft_lstnew("n3");
+// 	n4 = ft_lstnew("n4");
 
-//     head = n3;
-//     ft_lstadd_front(&head, n2);
-//     ft_lstadd_front(&n2, n1);
+//     ft_lstadd_back(&n1, n2);
+//     ft_lstadd_back(&n2, n3);
+// 	ft_lstadd_back(&n3, n4);
 
 //     show_list(n1);
-//     ft_lstdelone( n1, free);
+//    ft_lstdelone( n2, free);
 //     // printf("-------------\n");
 //     // show_list(n1);
 

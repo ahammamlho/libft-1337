@@ -6,11 +6,11 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:34:55 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 10:15:49 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 11:56:32 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
@@ -33,23 +33,24 @@ int	ft_lstsize(t_list *lst)
 //      head = head->next;
 //     }
 // }
-
+// t_list *ft_lstnew(void *content)
+// {
+//     t_list	*result;
+// 	result = (t_list *)malloc(sizeof(t_list));
+// 	result->content = content;
+// 	result->next = 0;
+// 	return(result);
+// }
 // int main()
 // {
-// 	t_list	n1, n2, n3;
-
-//     t_list *head;
-
-//     n1.content = "a1";
-//     n2.content = "a2";
-//     n3.content = "a3";
-
-//     head = &n1;
-//     n1.next = &n2;
-//     n2.next = &n3;
-//     n3.next = 0;
-//     show_list(head);
-//     printf("%d\n",ft_lstsize(head));
-//     show_list(head);
-
+// 	t_list	*n1;
+//     t_list	*n2;
+//     t_list	*n3;
+//     n1 = ft_lstnew("a1");
+//     n2 = ft_lstnew("a2");
+//     n3 = ft_lstnew("a3");
+//     ft_lstadd_front( &n3, n2);
+//     ft_lstadd_front( &n2, n1);
+//     show_list(n1);
+//     printf("len = %d \n", ft_lstsize(n1));
 // }

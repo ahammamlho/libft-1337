@@ -6,27 +6,31 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:54:03 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 16:25:23 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 16:01:18 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_add_char(const char *src, char c)
+static int	ft_nbrlen(int nbr)
 {
-	char	*result;
-	int		i;
+	int	len;
+	int	mod;
 
-	i = 0;
-	result = (char *)malloc (ft_strlen(src) + 2);
-	while (src && src[i] != '\0')
+	len = 1;
+	if (nbr > 0)
+		mod = nbr / 10;
+	else
 	{
-		result[i] = src[i];
-		i++;
+		mod = -nbr / 10;
+		len++;
+	}	
+	while (mod > 0)
+	{
+		len++;
+		mod = mod / 10;
 	}
-	result[i] = c;
-	result[i + 1] = '\0';
-	return (result);
+	return (len);
 }
 
 static char	*ft_reverse(char *src)
@@ -47,47 +51,65 @@ static char	*ft_reverse(char *src)
 	return (src);
 }
 
-static char	*zero(int z)
+static char	*ft_handle(int z)
 {
-	char	*result;
-
-	result = (char *)malloc(2);
-	z++;
-	result[0] = '0';
-	result[1] = '\0';
-	return (result);
+	if (z == 0)
+		return (ft_strdup("0"));
+	return (ft_strdup("-2147483648"));
 }
 
 char	*ft_itoa(int n)
 {
 	char	*result;
-	int		nbr;
+	int		temp;
 	int		mod;
+	int		i;
 
-	result = 0;
-	nbr = n;
-	mod = 0;
-	if (n == 0)
-		return (zero(0));
-	if (n == -2147483648)
+	i = 0;
+	temp = n;
+	if (n == 0 || n == -2147483648)
+		return (ft_handle(n));
+	if (temp < 0)
+		temp = -temp;
+	result = (char *)malloc(ft_nbrlen(n) + 1);
+	while (temp > 0)
 	{
-		result = ft_add_char(result, '8');
-		nbr = -214748364;
-	}
-	if (nbr < 0)
-		nbr = -nbr;
-	while (nbr > 0)
-	{
-		mod = nbr % 10;
-		result = ft_add_char(result, mod + '0');
-		nbr = nbr / 10;
+		mod = temp % 10;
+		result[i] = mod + '0';
+		temp = temp / 10;
+		i++;
 	}
 	if (n < 0)
-		result = ft_add_char(result, '-');
+		result[i++] = '-';
+	result[i] = '\0';
 	return (ft_reverse(result));
 }
 
 // int main()
 // {
-// 	printf("%s\n" , ft_itoa(0));
+// 	printf("|%s|\n" , ft_itoa(-2147483648));
 // }
+// char	*ft_itoa(int n)
+// {
+// 	char	*result;
+// 	int		nbr;
+// 	int		mod;	
+// 	nbr = n;
+// 	mod = 0;
+// 	// if (n == 0)
+// 	// 	return (zero(0));
+// 	// if (n == -2147483648)
+// 	// {
+// 	// 	result = ft_add_char(result, '8');
+// 	// 	nbr = -214748364;
+// 	// }
+// 	if (nbr < 0)
+// 		nbr = -nbr;
+// 	while (nbr > 0)
+// 	{
+// 		mod = nbr % 10;
+// 		result = ft_add_char(result, mod + '0');
+// 		nbr = nbr / 10;
+// 	}
+// 	if (n < 0)
+// 		result = ft_add_char(result, '-');

@@ -6,11 +6,11 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:37:03 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 10:15:29 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 11:56:09 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

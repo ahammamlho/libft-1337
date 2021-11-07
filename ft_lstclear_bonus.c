@@ -6,28 +6,29 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 11:24:37 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 10:15:15 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 11:56:02 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	del(lst->content);
-	free(lst);
+    t_list *temp;
+
+    temp = *lst;
+    while (temp)
+    {
+        ft_lstdelone(temp, del);
+        temp = temp->next;
+    }
 }
 
-// void ft_lstclear(t_list **lst, void (*del)(void *))
+// void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // {
-//     while (*lst)
-//     {
-//         ft_lstdelone(*lst, del);
-//         lst = lst->next;
-//     }
+// 	del(lst->content);
+// 	free(lst);
 // }
-
 // int main()
 // {
-
 // }

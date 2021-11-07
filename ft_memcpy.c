@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:10:15 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 11:35:10 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 16:05:04 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // {
 // 	char s1[] = "ahamma";
 // 	char s2[] = "uiuiuuigjgj";
-
 // 	printf("-->%s", (char *)ft_memcpy(s1,s2,5));
 // }

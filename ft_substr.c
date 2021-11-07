@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:24:12 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 17:13:50 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 12:41:36 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int		i;
 
 	i = 0;
-	result = (char *)ft_calloc(len + 1, sizeof(char));
+	if (ft_strlen(s) < start || len == 0)
+		return ((char *)ft_calloc(1, 1));
+	else if (ft_strlen(s) - start < len)
+		result = (char *)ft_calloc(ft_strlen(s) - start + 1, 1);
+	else
+		result = (char *)ft_calloc(len + 1, 1);
 	if (!result)
 		return (0);
-	if (len == 0 || ft_strlen(s) < start)
-		return (result);
 	while (s && s[i] != '\0' && i < len)
 	{
 		result[i] = s[i + start];
@@ -35,5 +38,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main()
 // {
-// 	printf ("%s",ft_substr("ahammam", 10, 2));
+// 	printf ("-->|%s|\n",ft_substr("ahammam", 2, 0));
 // }

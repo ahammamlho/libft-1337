@@ -6,11 +6,11 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 09:27:11 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 10:15:42 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 11:58:43 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
@@ -25,7 +25,7 @@ t_list	*ft_lstnew(void *content)
 // int main()
 // {
 // 	 t_list	*result;
-// 	 int a = 1;
-// 	 result = ft_lstnew(&a);
-// 	// printf("%d", result->content);
+// 	 char *a = "ahammam";
+// 	 result = ft_lstnew(a);
+// 	 printf("--> |%s|\n", result->content);
 // }

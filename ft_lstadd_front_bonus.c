@@ -6,11 +6,11 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 09:56:29 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 10:15:08 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 11:55:58 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
@@ -25,7 +25,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 //      head = head->next;
 //     }
 // }
-
 // t_list *ft_lstnew(void *content)
 // {
 //     t_list	*result;
@@ -34,7 +33,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 	result->next = 0;
 // 	return(result);
 // }
-
 // int main()
 // {
 // 	t_list	*n1;
@@ -48,5 +46,4 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 //     ft_lstadd_front( &n2, n1);
 
 //     show_list(n1);
-
 // }
