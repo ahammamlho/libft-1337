@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:45:12 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/07 11:56:14 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 16:39:46 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (0);
 	while (lst->next != 0)
 	{
 		lst = lst->next;

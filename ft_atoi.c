@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:04:29 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/05 20:22:08 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:28:42 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	int		sign;
-	int		result;
+	int				i;
+	int				sign;
+	long int		result;
 
 	i = 0;
 	result = 0;
@@ -43,5 +43,15 @@ int	ft_atoi(const char *str)
 		result = result * 10 + str[i] - '0';
 		i++;
 	}
-	return (sign * result);
+	return ((int )(sign * result));
 }
+// #include <string.h>
+// int main()
+// {
+// 	int a = ft_atoi("      -2147483650");
+// 	int b = atoi("      -2147483650");
+// 	if (a == b)
+// 	printf("success a = |%d| , b = |%d|",a,b);
+// 	else
+// 		printf("ko a = |%d| , b = |%d|",a,b);
+// }

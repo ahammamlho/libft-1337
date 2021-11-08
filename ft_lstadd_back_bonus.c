@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:51:37 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/07 16:11:50 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 16:51:44 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp_last;
 
+	if (!lst)
+		return ;
 	temp_last = ft_lstlast(*lst);
-	temp_last->next = new;
+	if (!temp_last)
+		*lst = new;
+	else
+		temp_last->next = new;
 }
 
 // void show_list(t_list *head)

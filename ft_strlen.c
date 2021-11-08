@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:12:04 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 14:23:49 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:35:57 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
-	char	*t_str;
 
 	i = 0;
-	t_str = (char *)str;
-	while (t_str && t_str[i] != '\0')
+	while (str[i] != '\0')
 		i++;
 	return (i);
 }

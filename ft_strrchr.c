@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:13:26 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/06 13:53:53 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:06:41 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *str, int c)
 	result = 0;
 	if (c == '\0')
 		return (&temp[ft_strlen(str)]);
-	while (temp && temp[i] != '\0')
+	while (temp[i] != '\0')
 	{
 		if (temp[i] == (char )c)
 			result = &temp[i];

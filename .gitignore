@@ -3,3 +3,4 @@ a.out
 *.o
 *.exe
 test
+test.c

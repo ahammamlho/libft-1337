@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:11:13 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 12:11:13 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:31:38 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strchr(const char *str, int c)
 
 	i = 0;
 	temp = (char *)str;
-	if (c == '\0')
+	if ((char )c == '\0')
 		return (&temp[ft_strlen(str)]);
-	while (temp && temp[i] != '\0')
+	while (temp[i] != '\0')
 	{
 		if (temp[i] == (char )c)
 			return (&temp[i]);
@@ -29,8 +29,8 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (0);
 }
-
+// #include <string.h> 
 // int main()
 // {
-// 	printf("%s",ft_strchr("ahammamt",'g'));
+// 	printf("%s",ft_strchr( 0,'\0'));
 // }

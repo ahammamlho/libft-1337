@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:54:03 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/07 16:01:18 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:16:44 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ char	*ft_itoa(int n)
 	if (temp < 0)
 		temp = -temp;
 	result = (char *)malloc(ft_nbrlen(n) + 1);
+	if (!result)
+		return (0);
 	while (temp > 0)
 	{
 		mod = temp % 10;

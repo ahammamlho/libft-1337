@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 11:10:33 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/07 11:56:06 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/08 12:16:34 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 //      head = head->next;
 //     }
 // }
-
 // t_list *ft_lstnew(void *content)
 // {
 //     t_list	*result;
@@ -35,12 +34,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // 	result->next = 0;
 // 	return(result);
 // }
-
 // int main()
 // {
 // 	t_list	*n1, *n2, *n3, *n4;
-
-
 //     n1 = ft_lstnew("n1");
 //     n2 = ft_lstnew("n2");
 //     n3 = ft_lstnew("n3");

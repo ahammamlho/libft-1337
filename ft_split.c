@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:56:06 by lahammam          #+#    #+#             */
-/*   Updated: 2021/11/03 17:53:14 by lahammam         ###   ########.fr       */
+/*   Updated: 2021/11/08 12:36:03 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ static char	*ft_add_mot(const char *str, int i, int j)
 	mot = 0;
 	len_mot = (j - i + 1) + 1;
 	mot = (char *)malloc (len_mot * sizeof(char));
+	if (!mot)
+		return (0);
 	k = 0;
 	while (k < len_mot - 1)
 	{
@@ -52,6 +54,27 @@ static char	*ft_add_mot(const char *str, int i, int j)
 	return (mot);
 }
 
+static void	ft_init(int *i, int *j, int *k)
+{
+	*i = 0;
+	*j = 0;
+	*k = 0;
+}
+
+char	**ft_free_result(char **result, int end)
+{
+	int	i;
+
+	i = 0;
+	while (i < end)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (0);
+}
+
 char	**ft_split(const char *str, char c)
 {
 	char	**result;
@@ -59,13 +82,10 @@ char	**ft_split(const char *str, char c)
 	int		j;
 	int		k;
 
-	i = 0;
-	j = 0;
-	k = 0;
-	result = 0;
-	if (!str)
-		return (result);
+	ft_init(&i, &j, &k);
 	result = (char **)malloc (ft_m_alloc (str, c) * sizeof(char *));
+	if (!result || !str)
+		return (0);
 	while (str && str[i] != '\0')
 	{
 		j = i;
@@ -73,25 +93,24 @@ char	**ft_split(const char *str, char c)
 			i++;
 		if (i != j)
 			result[k++] = ft_add_mot(str, j, i - 1);
+		if (i != j && !result[k - 1])
+			return (ft_free_result(result, k));
 		while (str[i] == c && str[i] != '\0')
 			i++;
 	}
 	result[k] = 0;
 	return (result);
 }
-
-/*
-int main()
-{
-    const char strs[]= "fkbm*lfgkmlk*fmbklfgmblk
-	*fgmblgmbgl*gsdg*hdhbdj*dsfgsd*dsdsa****";
-    char **result;
-	result = 0;
-    result = ft_split(strs,'*');
-   int i = 0 ;
-    while (result && result[i] != 0)
-    {
-         printf("%d-->|%s|\n", i, result[i]);
-         i++;
-    }
-}*/
+// int main()
+// {
+//     const char strs[]= " t. Sed non risus. Suspendisse";
+//     char **result;
+// 	result = 0;
+//     result = ft_split(strs,' ');
+//     int i = 0 ;
+//     while (result && result[i] != 0)
+//     {
+//          printf("%d-->|%s|\n", i, result[i]);
+//          i++;
+//     }
+// }
